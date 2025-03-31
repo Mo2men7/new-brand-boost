@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 function ThemedMarquee({ items }) {
   return (
     <Marquee
-      className="bg-[#c5fb79] border-t-2 border-b-2 border-[#09060a] py-2"
+      className="bg-[#c5fb79] border-t-2 border-b-2 border-[#09060a] py-2 overflow-hidden h-20"
       autoFill
       pauseOnHover
       direction="left"
