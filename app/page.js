@@ -1,3 +1,5 @@
+import AboutSection from "./_components/AboutSection";
+import { BentoGridDemo } from "./_components/BentoGrid";
 import HeroSection from "./_components/HeroSection";
 import ThemedMarquee from "./_components/ThemedMarquee";
 
@@ -17,7 +19,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection />
+
       <ThemedMarquee items={marqueeImages} />
+
+      <AboutSection />
+
+      <div className="bg-primary border-y-2 border-[#09060a] py-2 px-3">
+        <BentoGridDemo />
+      </div>
     </div>
   );
 }

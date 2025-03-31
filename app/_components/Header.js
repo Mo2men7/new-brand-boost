@@ -35,7 +35,7 @@ function Header() {
       <nav className="w-full px-5 lg:px-8 xl:px-[8%] py-4 lg:ms-4 flex items-center justify-between fixed z-[100]">
         <Link href="/">
           <Image
-            src={`/logo/original-letter.webp`}
+            src={`/logo/white-green-letter.svg`}
             alt="logo"
             width={50}
             height={50}
