@@ -1,7 +1,9 @@
+import Image from "next/image";
 import AboutSection from "./_components/AboutSection";
 import { BentoGridDemo } from "./_components/BentoGrid";
 import HeroSection from "./_components/HeroSection";
 import ThemedMarquee from "./_components/ThemedMarquee";
+import { ContainerScroll } from "./_components/ui/container-scroll-animation";
 
 export default function Home() {
   const marqueeImages = [
@@ -21,6 +23,28 @@ export default function Home() {
       <HeroSection />
 
       <ThemedMarquee items={marqueeImages} />
+
+      <ContainerScroll
+        titleComponent={
+          <>
+            <h1 className="text-4xl font-semibold text-black dark:text-white">
+              Unlock the power of <br />
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                UGC Videos
+              </span>
+            </h1>
+          </>
+        }
+      >
+        <Image
+          src={`/logo/original-rounded.webp`}
+          alt="hero"
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-contain h-full"
+          draggable={false}
+        />
+      </ContainerScroll>
 
       <AboutSection />
 
