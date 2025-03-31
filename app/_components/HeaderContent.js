@@ -41,7 +41,7 @@ function HeaderContent({ links }) {
   };
 
   return (
-    <div className="w-screen h-screen overflow-hidden fixed inset-0">
+    <div className="w-screen h-screen overflow-hidden fixed inset-0 z-[90]">
       <div
         className="w-full h-full grid grid-rows-1"
         style={{ gridTemplateColumns: "repeat(20, minmax(100px, 1fr))" }}
@@ -59,7 +59,7 @@ function HeaderContent({ links }) {
         ))}
       </div>
 
-      <section className="w-full h-full absolute inset-0 flex items-center justify-center z-20">
+      <section className="w-full h-full absolute inset-0 flex items-center justify-center z-30">
         <ul className="w-[900px] px-16 leading-10">
           {links.map((link) => (
             <li key={link.id} className="overflow-hidden">
