@@ -1,12 +1,17 @@
 "use client";
 
+import { TiStarFullOutline } from "react-icons/ti";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 import HeaderContent from "./HeaderContent";
 import { Button } from "@heroui/react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 function Header() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const burger = {
@@ -26,20 +31,41 @@ function Header() {
   ];
 
   return (
-    <nav className="bg-black w-full h-full px-12 py-4 absolue z-20">
-      <div className="relative w-full p-2 flex justify-between items-center rounded-lg z-40">
-        <h1 className="font-bold text-white text-2xl">Brand Boost</h1>
+    <>
+      <nav className="w-full px-5 lg:px-8 xl:px-[8%] py-4 lg:ms-4 flex items-center justify-between fixed z-30">
+        <Link href="/">
+          <Image
+            src={`/logo/original-letter.webp`}
+            alt="logo"
+            width={50}
+            height={50}
+            className="cursor-pointer"
+          />
+        </Link>
 
-        <ul className="hidden lg:flex items-center justify-center gap-4 uppercase">
+        <ul className="hidden lg:flex items-center justify-center gap-4 lg:gap-6 px-12 py-3 bg-white/10 shadow-sm rounded-full uppercase">
           {links.map((link) => (
-            <li key={link.id} className="text-white font-semibold text-lg">
+            <li
+              key={link.id}
+              className={`${
+                pathname === link.link
+                  ? "text-[#c5fb79] font-bold border-b"
+                  : "text-white"
+              } font-semibold text-md hover:text-[#c5fb79]`}
+            >
               <a href={link.link}>{link.name}</a>
             </li>
           ))}
         </ul>
 
         <div className="hidden lg:block">
-          <Button className="bg-white text-black">Login</Button>
+          <Button
+            as={Link}
+            href="/login"
+            className="flex items-center gap-3 px-10 py-2.5 border border-[#c5fb79] text-[#c5fb79] rounded-full ml-4 hover:bg-[#c5fb79] hover:text-black transition-all"
+          >
+            Join Now <TiStarFullOutline />
+          </Button>
         </div>
 
         <div
@@ -59,12 +85,11 @@ function Header() {
             className="w-[30px] h-[2px] bg-white origin-left"
           ></motion.div>
         </div>
-      </div>
-
+      </nav>
       <AnimatePresence mode="wait">
         {isOpen && <HeaderContent links={links} />}
       </AnimatePresence>
-    </nav>
+    </>
   );
 }
 

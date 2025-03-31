@@ -1,9 +1,5 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-pink-500 to-violet-500">
-      <p>lol</p>
-    </div>
+    <div className="min-h-screen bg-gradient-to-br from-purple-950 to-fuchsia-950"></div>
   );
 }

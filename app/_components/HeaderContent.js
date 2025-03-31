@@ -49,7 +49,7 @@ function HeaderContent({ links }) {
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
-            className="w-full h-full bg-[#520a70]"
+            className="w-full h-full bg-primary"
             variants={children}
             initial="hidden"
             animate="show"
@@ -71,7 +71,7 @@ function HeaderContent({ links }) {
               >
                 <a
                   className={`flex items-center gap-1 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase ${
-                    pathname === link.link ? "text-[#d695f5]" : "text-[#c5fb79]"
+                    pathname === link.link ? "text-accent" : "text-text"
                   } hover:text-white transition-all`}
                   href={link.link}
                 >
