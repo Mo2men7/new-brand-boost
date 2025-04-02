@@ -1,11 +1,11 @@
 import { ThreeDCardDemo } from "../_components/ui/3d-card";
 
-function Freelancers() {
-  const talents = Array.from({ length: 10 }, (_, i) => {
+function Services() {
+  const services = Array.from({ length: 10 }, (_, i) => {
     return {
       id: i * 215,
-      name: `Talent Talent ${i + 1}`,
-      image: `https://robohash.org/${(i * 5) / 21 + 2001}`,
+      name: `Service ${i + 1}`,
+      image: `https://images.unsplash.com/photo-1667835949495-78a1ea9ecd77?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
       description:
         i % 2 == 0
           ? `lorem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipisicing elit . Talent ${i}`
@@ -19,13 +19,13 @@ function Freelancers() {
         <h1 className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl uppercase font-bold text-transparent sm:text-7xl text-center">
           Our{" "}
           <span className="bg-gradient-to-b from-green-400 to-lightGreen bg-clip-text py-8 uppercase font-bold text-transparent">
-            Freelancers
+            Services
           </span>
         </h1>
 
         <div className="flex flex-wrap justify-center items-center gap-x-10 px-7">
-          {talents.map((talent, i) => (
-            <ThreeDCardDemo key={i} item={talent} />
+          {services.map((service, i) => (
+            <ThreeDCardDemo key={i} item={service} />
           ))}
         </div>
       </main>
@@ -33,4 +33,4 @@ function Freelancers() {
   );
 }
 
-export default Freelancers;
+export default Services;
