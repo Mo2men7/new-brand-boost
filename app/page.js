@@ -19,7 +19,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div>
       <HeroSection />
 
       <ThemedMarquee items={marqueeImages} />
