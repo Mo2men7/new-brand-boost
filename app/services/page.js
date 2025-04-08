@@ -8,8 +8,8 @@ function Services() {
       image: `https://images.unsplash.com/photo-1667835949495-78a1ea9ecd77?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
       description:
         i % 2 == 0
-          ? `lorem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipisicing elit . Talent ${i}`
-          : `lorem ipsum dolor sit amet consectetur adipisicing elit . Talent ${i}`,
+          ? `lorem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipem ipsum dolor sit amet consectetur adipisicing elit . Service ${i}`
+          : `lorem ipsum dolor sit amet consectetur adipisicing elit . Service ${i}`,
     };
   });
 

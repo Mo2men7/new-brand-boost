@@ -11,6 +11,7 @@ import React, {
 } from "react";
 import Link from "next/link";
 import { Button } from "@heroui/react";
+import { usePathname } from "next/navigation";
 
 const MouseEnterContext = createContext(undefined);
 
@@ -130,6 +131,9 @@ export const useMouseEnter = () => {
 };
 
 export function ThreeDCardDemo({ item }) {
+  const pathname = usePathname();
+  const dynamicHref = `${pathname}/${item.id}`;
+
   return (
     <CardContainer className="inter-var">
       <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-black/[0.1] w-auto sm:w-[23rem] h-auto rounded-xl p-6 border">
@@ -161,7 +165,7 @@ export function ThreeDCardDemo({ item }) {
           <CardItem translateZ={70} as="button" className={"w-full"}>
             <Button
               as={Link}
-              href={`${item?.id}`}
+              href={`${dynamicHref}`}
               className="cursor-pointer block w-full px-4 py-2 rounded-full bg-lightGreen text-dark text-xs font-bold"
             >
               See Work
