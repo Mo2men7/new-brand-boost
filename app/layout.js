@@ -1,4 +1,6 @@
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
+
 import "./globals.css";
 
 export const metadata = {
@@ -12,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={`antialiased`}>
         <Header />
         <main className="bg-primary min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
