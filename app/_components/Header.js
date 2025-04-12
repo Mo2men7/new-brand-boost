@@ -30,6 +30,10 @@ function Header() {
     { id: 6, name: "Blogs", link: "/blogs" },
   ];
 
+  if (pathname === "/login" || pathname === "/signup") {
+    return null;
+  }
+
   return (
     <>
       <nav className="w-full px-5 lg:px-8 xl:px-[8%] py-4 lg:ms-4 flex items-center justify-between fixed z-[100]">

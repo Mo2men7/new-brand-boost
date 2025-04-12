@@ -3,7 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === "/login" || pathname === "/signup") {
+    return null;
+  }
+
   return (
     <footer className="bg-dark text-lightGreen py-12">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
