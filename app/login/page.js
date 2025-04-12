@@ -1,9 +1,15 @@
 export default function Login() {
   return (
     <section className="h-screen">
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 relative">
-        <div className="absolute top-0 left-0 w-80 h-80 bg-accent rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent rounded-full blur-3xl opacity-40"></div>
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 relative overflow-hidden">
+        <div
+          id="blur1"
+          className="absolute top-0 left-0 w-80 h-80 bg-accent rounded-full blur-3xl opacity-40 animate-swap1"
+        ></div>
+        <div
+          id="blur2"
+          className="absolute bottom-0 right-0 w-80 h-80 bg-accent rounded-full blur-3xl opacity-40 animate-swap2"
+        ></div>
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             alt="Brand Boost"

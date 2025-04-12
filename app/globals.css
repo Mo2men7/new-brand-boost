@@ -54,3 +54,31 @@
     }
   }
 }
+
+@keyframes swap1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(calc(100vw - 20rem), calc(100vh - 20rem));
+  }
+}
+
+@keyframes swap2 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(calc(-100vw + 20rem), calc(-100vh + 20rem));
+  }
+}
+
+.animate-swap1 {
+  animation: swap1 35s ease-in-out infinite;
+}
+
+.animate-swap2 {
+  animation: swap2 35s ease-in-out infinite;
+}
